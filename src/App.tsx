@@ -3,7 +3,9 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './store';
 // Styling
+import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './Styles/GlobalStyle';
+import Theme from './Styles/Theme';
 // history 관리
 import { createBrowserHistory } from 'history';
 // 외부 컴포넌트 및 모듈을 이용해 Router 관리 
@@ -15,10 +17,12 @@ const history = createBrowserHistory()
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <GlobalStyles />
-      <Module.Router history={history}>
-        <Router />
-      </Module.Router>
+      <ThemeProvider theme={Theme}>
+        <GlobalStyles />
+        <Module.Router history={history}>
+          <Router />
+        </Module.Router>
+      </ThemeProvider>
     </Provider>
   );
 };
