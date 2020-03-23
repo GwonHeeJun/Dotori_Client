@@ -16,16 +16,17 @@ export const TextArea = styled.div`
     flex: 2;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
 `
 
 export const TextWrapper = styled.div`
     width: 80%;
-    height: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 `
 
 export const Title = styled.h2`
