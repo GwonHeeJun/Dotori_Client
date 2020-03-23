@@ -15,6 +15,7 @@ module.exports = {
       'comma-dangle': [2, 'always-multiline'],
       'no-param-reassign': 0,
       'arrow-body-style': 0,
-      'import/prefer-default-export': 0
+      'import/prefer-default-export': 0,
+      'react/no-unescaped-entities': 0
     },
   };

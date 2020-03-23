@@ -9,5 +9,14 @@ export default createGlobalStyle`
         background-color: ${(props) => props.theme.backgroundColor};
         text-decoration: none;
         font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+    html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
 `;
