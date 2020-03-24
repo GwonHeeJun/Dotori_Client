@@ -8,7 +8,7 @@ import { ReactComponent as ILLUST_DOMITORI } from 'Assets/Svg/domitori.svg';
 import AuthContents from 'Components/AuthContents/AuthContents';
 import * as S from './Style';
 
-const AuthContainer: React.FC = () => {
+const MainContainer: React.FC = () => {
     return (
       <AuthTemplate>
         <S.UserHeader>
@@ -24,4 +24,4 @@ const AuthContainer: React.FC = () => {
     )
 }
 
-export default AuthContainer;
+export default MainContainer;
