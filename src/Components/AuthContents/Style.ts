@@ -66,6 +66,11 @@ export const Lable = styled.h2`
 
 export const Buttons = styled.div`
     display: flex;
+
+    a {
+        text-decoration: none;
+        flex: 1;
+    }
 `
 
 export const Button = styled.div<StyleProps>`
@@ -87,4 +92,5 @@ export const ButtonDesc = styled.span<StyleProps>`
     font-size: 22px;
     font-weight: bold;
     line-height: 35px;
+    text-decoration: none;
 `
