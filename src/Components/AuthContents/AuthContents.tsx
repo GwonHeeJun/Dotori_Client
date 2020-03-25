@@ -29,7 +29,7 @@ const AuthContents: React.FC = () => {
                 <S.ButtonDesc textColor="#fff">학생으로 시작</S.ButtonDesc>
               </S.Button>
             </Link>
-            <Link to="/regist">
+            <Link to="/login">
               <S.Button backgrounColor="#E8E8EC">
                 <ICN_SETTING />
                 <S.ButtonDesc textColor="#222222">사감으로 시작</S.ButtonDesc>

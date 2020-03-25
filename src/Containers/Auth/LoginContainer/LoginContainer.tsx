@@ -8,6 +8,7 @@ import AuthHeader from 'Components/AuthHeader/AuthHeader';
 import AuthTemplate from 'Containers/Template/AuthTemplate/AuthTemplate';
 // Frequently used modules and functions
 import { historyType } from 'Utils/Types';
+import AuthLoginArea from 'Components/AuthLoginArea/AuthLoginArea';
 
 type LoginProps = {
     history: historyType
@@ -20,7 +21,7 @@ const LoginContainer: React.FC<LoginProps> = ({ history }) => {
                 <AuthHeader isLogo={false} onClick={() => history.go(-1)} />
             </S.UserHeader>
             <S.UserContents>
-
+                <AuthLoginArea />
             </S.UserContents>
             <S.UserFooter>
                 <ILLUST_DOMITORI />
