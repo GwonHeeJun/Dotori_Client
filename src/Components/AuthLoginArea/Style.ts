@@ -113,5 +113,6 @@ export const Desc = styled.span`
     a {
         color: #217ECE;
         text-decoration: none;
+        margin-left: 5px;
     }
 `
