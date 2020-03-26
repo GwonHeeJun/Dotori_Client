@@ -2,18 +2,18 @@ import React from 'react';
 // Router
 import { Link, Redirect } from 'react-router-dom';
 // Assets & Style
-import * as S from './Style';
 import { ReactComponent as ICN_USER } from 'Assets/Svg/user.svg';
 import { ReactComponent as ICN_SETTING } from 'Assets/Svg/setting.svg';
 // Global State Mangement
 import { RootState } from 'Reducers';
 import { useSelector, useDispatch } from 'react-redux';
 import { CHOOSE_STUDENT, CHOOSE_TEACHER } from 'Actions/User.action';
+import * as S from './Style';
 
 const AuthContents: React.FC = () => {
   const { user } = useSelector((state: RootState) => state.auth);
   const dispatch = useDispatch();
-  
+
   if (user) {
     return <Redirect to="/home" />
   }

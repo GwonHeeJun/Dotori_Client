@@ -4,6 +4,6 @@ import loginSaga from './login.saga';
 
 export const rootSaga = function* root() {
     yield all([
-        fork(loginSaga)
+        fork(loginSaga),
     ]);
 };

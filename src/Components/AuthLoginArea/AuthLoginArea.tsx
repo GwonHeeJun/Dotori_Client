@@ -3,12 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 // Asset & Style
 import { ReactComponent as ICN_CHECK } from 'Assets/Svg/check.svg';
-import * as S from './Style';
 // Global State Management
 import { useDispatch, useSelector } from 'react-redux';
 import { LOG_IN_REQUEST } from 'Actions/User.action';
 import { RootState } from 'Reducers';
-
+import * as S from './Style';
 
 
 const AuthLoginArea: React.FC = () => {
@@ -25,7 +24,7 @@ const AuthLoginArea: React.FC = () => {
     if (!email) {
       setErrMsg('이메일을 입력해주세요')
       return;
-    } else if (!password) {
+    } if (!password) {
       setErrMsg('비밀번호를 입력해주세요')
       return;
     }
@@ -38,14 +37,14 @@ const AuthLoginArea: React.FC = () => {
     dispatch({
       type: LOG_IN_REQUEST,
       payload: {
-        email: email,
-        password: password,
+        email,
+        password,
       },
     });
   }
 
   useEffect(() => {
-    var LS = localStorage.getItem('email');
+    const LS = localStorage.getItem('email');
     if (LS) {
       setEmail(LS)
     }
@@ -59,19 +58,23 @@ const AuthLoginArea: React.FC = () => {
     <S.Postioner>
       <S.InputArea>
         <S.InputWrapper>
-          <S.Title>{userType} 로그인</S.Title>
+          <S.Title>
+            {userType}
+            {' '}
+            로그인
+          </S.Title>
           <S.InputForm onSubmit={LoginSubmit}>
             <S.Input
               type="email"
               placeholder="이메일"
               value={email}
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <S.Input
               type="password"
               placeholder="비밀번호"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <S.InputRow>
               <S.EmailWrap>
@@ -88,11 +91,11 @@ const AuthLoginArea: React.FC = () => {
           </S.InputForm>
           <S.Desc>
             이메일 혹은 비밀번호를 잊으셨나요?
-              <Link to="#">이메일/비밀번호 찾기</Link>
+            <Link to="#">이메일/비밀번호 찾기</Link>
           </S.Desc>
           <S.Desc>
             아직 계정이 없나요?
-              <Link to="#">계정 생성하기</Link>
+            <Link to="#">계정 생성하기</Link>
           </S.Desc>
         </S.InputWrapper>
       </S.InputArea>
