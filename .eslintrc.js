@@ -18,6 +18,8 @@ module.exports = {
       'import/prefer-default-export': 0,
       'react/no-unescaped-entities': 0,
       'jsx-a11y/anchor-is-valid': 0,
-      'import/no-extraneous-dependencies': 0
+      'import/no-extraneous-dependencies': 0,
+      'no-alert': 0,
+      'no-console': 0 // master 브랜치에서는 1로 바꾸고 실행해주세요.
     },
   };
