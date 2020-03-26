@@ -63,7 +63,7 @@ export const BoxText = styled.span`
     margin-left: 11px;
 `
 
-export const LoginButton = styled.div`
+export const LoginButton = styled.button`
     background-color: #0F4C81;
     width: 100px;
     height: 43px;
@@ -72,6 +72,7 @@ export const LoginButton = styled.div`
     display: flex;
     justify-content: center;
     cursor: pointer;
+    outline: none;
 `
 
 export const LoginText = styled.span`
@@ -96,6 +97,11 @@ export const Input = styled.input`
         font-size: 20px;
         font-weight: bold;
     }
+`
+
+export const ErrMsg = styled.span`
+    margin-top: 10px;
+    color: #fa5252;
 `
 
 export const Title = styled.h2`

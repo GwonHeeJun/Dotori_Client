@@ -17,6 +17,7 @@ module.exports = {
       'arrow-body-style': 0,
       'import/prefer-default-export': 0,
       'react/no-unescaped-entities': 0,
-      'jsx-a11y/anchor-is-valid': 0
+      'jsx-a11y/anchor-is-valid': 0,
+      'import/no-extraneous-dependencies': 0
     },
   };
