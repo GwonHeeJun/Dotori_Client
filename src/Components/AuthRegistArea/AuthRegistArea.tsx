@@ -27,7 +27,7 @@ const AuthRegistArea: React.FC = () => {
                 </S.BoxText>
               </S.EmailWrap>
               <S.LoginButton>
-                <S.LoginText>로그인</S.LoginText>
+                <S.LoginText>회원가입</S.LoginText>
               </S.LoginButton>
             </S.InputForm>
           </S.InputWrapper>
