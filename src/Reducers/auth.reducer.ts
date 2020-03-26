@@ -54,6 +54,7 @@ const initialState: initialStateType = {
 export default (state: initialStateType = initialState, action: any) => {
     return produce(state, (draft) => {
         switch (action.type) {
+            // 로그인 유저 타입 선택 ↓
             case User.CHOOSE_STUDENT: {
                 draft.userType = '학생'
                 break;
@@ -62,6 +63,7 @@ export default (state: initialStateType = initialState, action: any) => {
                 draft.userType = '사감'
                 break;
             }
+            // 로그인 , Saga와 연결 ↓
             case User.LOG_IN_REQUEST: {
                 draft.isLoggingIn = true;
                 draft.isLoggedIn = false;
@@ -81,6 +83,7 @@ export default (state: initialStateType = initialState, action: any) => {
                 draft.loginError = action.error;
                 break;
             }
+            // 회원가입 , Saga와 연결 ↓
             case User.SIGN_UP_REQUEST: {
                 draft.isSignedUp = false;
                 draft.isSigningUp = true;

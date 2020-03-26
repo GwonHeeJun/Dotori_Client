@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-
-import { Link, Redirect } from 'react-router-dom';
+// Asset & Style
+import * as S from './Style';
 import { ReactComponent as ICN_CHECK } from 'Assets/Svg/check.svg';
+// Router
+import { Link, Redirect } from 'react-router-dom';
+// Global State Management
 import { useDispatch, useSelector } from 'react-redux';
 import { SIGN_UP_REQUEST } from 'Actions/User.action';
 import { RootState } from 'Reducers';
-import * as S from './Style';
 
 const AuthRegistArea: React.FC = () => {
   const [isCheck, setIsCheck] = useState(Boolean);

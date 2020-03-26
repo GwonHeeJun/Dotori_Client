@@ -3,6 +3,7 @@ import {
 } from 'redux-saga/effects';
 import * as userAction from 'Actions/User.action';
 
+// Login Func에 들어오는 매개변수의 타입
 type LoginPayload = {
   type: String,
   payload: {
@@ -26,6 +27,7 @@ function* login(action: LoginPayload) {
   }
 }
 
+// Regist Func에 들어오는 매개변수의 타입
 type RegistPayload = {
   type: String,
   payload: {
@@ -35,7 +37,7 @@ type RegistPayload = {
   }
 }
 
-function* regist(action : RegistPayload) {
+function* regist(action: RegistPayload) {
   console.log(action)
   try {
     yield delay(3000);
@@ -50,15 +52,11 @@ function* regist(action : RegistPayload) {
   }
 }
 
-function* watchLogin() {
+function* watchAuth() {
   yield takeLatest(userAction.LOG_IN_REQUEST, login);
-}
-
-function* watchRegist() {
   yield takeLatest(userAction.SIGN_UP_REQUEST, regist);
 }
 
 export default function* authSaga() {
-  yield fork(watchLogin);
-  yield fork(watchRegist);
+  yield fork(watchAuth);
 }
