@@ -31,7 +31,10 @@ type initialStateType = Readonly<{
     isLoggingIn: Boolean;
     isLoggingOut: Boolean;
     loginError: String;
-    userType: String
+    userType: String;
+    isSignedUp: Boolean;
+    isSigningUp: Boolean;
+    registError: String;
 }>;
 
 const initialState: initialStateType = {
@@ -40,12 +43,27 @@ const initialState: initialStateType = {
     isLoggingIn: false, // 로그인 시도 중인지?
     isLoggingOut: false, // 로그아웃 시도 중인지?
     loginError: '', // 로그인 에러 사유,
+
     userType: '', // 로그인하는 유저의 타입
+
+    isSignedUp: false, // 회원가입 했는 지?
+    isSigningUp: false, // 회원가입 시도 중인지?
+    registError: '', // 회원가입 에러 사유
 };
 
 export default (state: initialStateType = initialState, action: any) => {
     return produce(state, (draft) => {
         switch (action.type) {
+            // 로그인 유저 타입 선택 ↓
+            case User.CHOOSE_STUDENT: {
+                draft.userType = '학생'
+                break;
+            }
+            case User.CHOOSE_TEACHER: {
+                draft.userType = '사감'
+                break;
+            }
+            // 로그인 , Saga와 연결 ↓
             case User.LOG_IN_REQUEST: {
                 draft.isLoggingIn = true;
                 draft.isLoggedIn = false;
@@ -65,12 +83,22 @@ export default (state: initialStateType = initialState, action: any) => {
                 draft.loginError = action.error;
                 break;
             }
-            case User.CHOOSE_STUDENT: {
-                draft.userType = '학생'
+            // 회원가입 , Saga와 연결 ↓
+            case User.SIGN_UP_REQUEST: {
+                draft.isSignedUp = false;
+                draft.isSigningUp = true;
+                draft.loginError = '';
                 break;
             }
-            case User.CHOOSE_TEACHER: {
-                draft.userType = '사감'
+            case User.SIGN_UP_SUCCESS: {
+                draft.isSigningUp = false;
+                draft.isSignedUp = true;
+                break;
+            }
+            case User.SIGN_UP_FAILURE: {
+                draft.isSignedUp = true;
+                draft.isSigningUp = false;
+                draft.registError = action.error;
                 break;
             }
             default: {
