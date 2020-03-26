@@ -14,5 +14,6 @@ export const PASSWORD_RESET_REQUEST = 'PASSWORD_RESET_REQUEST' as const;
 export const PASSWORD_RESET_SUCCESS = 'PASSWORD_RESET_SUCCESS' as const;
 export const PASSWORD_RESET_FAILURE = 'PASSWORD_RESET_FAILURE' as const;
 
-export const CHOOSE_STUDENT = 'CHOOSE_STUDENT' as const;
-export const CHOOSE_TEACHER = 'CHOOSE_TEACHER' as const;
+export const CHANGE_USER_TYPE = 'CHANGE_USER_TYPE' as const;
+
+export const RESET_AUTH_PROCESS = 'RESET_AUTH_PROCESS' as const;

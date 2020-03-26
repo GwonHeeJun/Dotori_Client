@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 // Asset & Style
 import { ReactComponent as ICN_CHECK } from 'Assets/Svg/check.svg';
 // Router
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // Global State Management
 import { useDispatch, useSelector } from 'react-redux';
-import { SIGN_UP_REQUEST } from 'Actions/User.action';
+import { SIGN_UP_REQUEST, RESET_AUTH_PROCESS } from 'Actions/User.action';
 import { RootState } from 'Reducers';
+import { historyType } from 'Utils/Types';
 import * as S from './Style';
 
-const AuthRegistArea: React.FC = () => {
+type RegistProps = {
+  history: historyType
+}
+
+const AuthRegistArea: React.FC<RegistProps> = ({ history }) => {
   const [isCheck, setIsCheck] = useState(Boolean);
   const [email, setEmail] = useState(String);
   const [crrPassword, setCrrPassword] = useState(String);
@@ -17,7 +22,7 @@ const AuthRegistArea: React.FC = () => {
   const [code, setCode] = useState(String);
   const [ErrMsg, setErrMsg] = useState(String);
   const dispatch = useDispatch();
-  const { isSignedUp } = useSelector((state: RootState) => state.auth);
+  const { singUpProcess } = useSelector((state: RootState) => state.auth);
 
   const RegistSubmit = (e: any) => {
     e.preventDefault();
@@ -50,9 +55,10 @@ const AuthRegistArea: React.FC = () => {
     });
   }
 
-  if (isSignedUp) {
+  if (singUpProcess === 'success') {
     alert('회원가입이 성공적으로 완료되었습니다.');
-    return <Redirect to="/login" />
+    history.go(-1);
+    dispatch({ type: RESET_AUTH_PROCESS });
   }
 
   return (
