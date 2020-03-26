@@ -32,7 +32,7 @@ const AuthLoginArea: React.FC = () => {
             </S.Desc>
             <S.Desc>
               아직 계정이 없나요?
-              <Link to="#">계정 생성하기</Link>
+              <Link to="/regist">계정 생성하기</Link>
             </S.Desc>
           </S.InputWrapper>
         </S.InputArea>
