@@ -7,7 +7,7 @@ import { ReactComponent as ICN_SETTING } from 'Assets/Svg/setting.svg';
 // Global State Mangement
 import { RootState } from 'Reducers';
 import { useSelector, useDispatch } from 'react-redux';
-import { CHOOSE_STUDENT, CHOOSE_TEACHER } from 'Actions/User.action';
+import { CHANGE_USER_TYPE } from 'Actions/User.action';
 import * as S from './Style';
 
 const AuthContents: React.FC = () => {
@@ -36,13 +36,13 @@ const AuthContents: React.FC = () => {
         <S.ButtonWrapper>
           <S.Lable>시작해 볼까요?</S.Lable>
           <S.Buttons>
-            <Link to="/login" onClick={() => dispatch({ type: CHOOSE_STUDENT })}>
+            <Link to="/login" onClick={() => dispatch({ type: CHANGE_USER_TYPE, payload: '학생' })}>
               <S.Button backgrounColor="#0F4C81">
                 <ICN_USER />
                 <S.ButtonDesc textColor="#fff">학생으로 시작</S.ButtonDesc>
               </S.Button>
             </Link>
-            <Link to="/login" onClick={() => dispatch({ type: CHOOSE_TEACHER })}>
+            <Link to="/login" onClick={() => dispatch({ type: CHANGE_USER_TYPE, payload: '사감' })}>
               <S.Button backgrounColor="#E8E8EC">
                 <ICN_SETTING />
                 <S.ButtonDesc textColor="#222222">사감으로 시작</S.ButtonDesc>

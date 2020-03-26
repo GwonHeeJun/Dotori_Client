@@ -21,7 +21,7 @@ const RegistContainer: React.FC<LoginProps> = ({ history }) => {
           <AuthHeader isLogo={false} onClick={() => history.go(-1)} />
         </S.UserHeader>
         <S.UserContents>
-          <AuthRegistArea />
+          <AuthRegistArea history={history} />
         </S.UserContents>
         <S.UserFooter>
           <ILLUST_DOMITORI />
