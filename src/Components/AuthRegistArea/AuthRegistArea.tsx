@@ -22,7 +22,7 @@ const AuthRegistArea: React.FC<RegistProps> = ({ history }) => {
   const [code, setCode] = useState(String);
   const [ErrMsg, setErrMsg] = useState(String);
   const dispatch = useDispatch();
-  const { singUpProcess } = useSelector((state: RootState) => state.auth);
+  const { singUpProcess, userType } = useSelector((state: RootState) => state.auth);
 
   const RegistSubmit = (e: any) => {
     e.preventDefault();
@@ -65,7 +65,10 @@ const AuthRegistArea: React.FC<RegistProps> = ({ history }) => {
     <S.Postioner>
       <S.InputArea>
         <S.InputWrapper>
-          <S.Title>학생 계정 생성</S.Title>
+          <S.Title>
+            {userType} 계정 생성
+          </S.Title>
+          <S.ErrMsg>{ErrMsg}</S.ErrMsg>
           <S.InputForm onSubmit={RegistSubmit}>
             <S.Input
               type="email"
@@ -106,7 +109,6 @@ const AuthRegistArea: React.FC<RegistProps> = ({ history }) => {
             </S.LoginButton>
           </S.InputForm>
         </S.InputWrapper>
-        <S.ErrMsg>{ErrMsg}</S.ErrMsg>
       </S.InputArea>
     </S.Postioner>
   )

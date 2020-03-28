@@ -28,7 +28,7 @@ export const InputForm = styled.form`
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 30px;
     align-items: center;
 `
 

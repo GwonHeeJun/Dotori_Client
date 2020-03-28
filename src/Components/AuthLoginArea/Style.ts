@@ -28,7 +28,8 @@ export const InputForm = styled.form`
     height: 60%;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 `
 
 export const InputRow = styled.div`
@@ -115,7 +116,8 @@ export const Desc = styled.span`
     font-size: 16px;
     font-weight: lighter;
     margin-bottom: 8px;
-
+    /* word-break: keep-all; */
+    white-space: pre;
     a {
         color: #217ECE;
         text-decoration: none;

@@ -30,7 +30,7 @@ export const TextWrapper = styled.div`
 `
 
 export const Title = styled.h2`
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
     color: #222222;
     line-height: 60px;
@@ -38,10 +38,12 @@ export const Title = styled.h2`
 
 export const SubTitle = styled.span`
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: lighter;
     color: #222222;
     white-space: normal;
+    word-break: keep-all;
+
 `
 
 export const ButtonArea = styled.div`
@@ -77,7 +79,7 @@ export const Button = styled.div<StyleProps>`
     background-color: ${(props) => `${props.backgrounColor}`};
     flex: 1;
     margin: 16px 15px 16px 0px;
-    padding: 10px 18px;
+    padding: 8px 16px;
     border-radius: 10px;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
     justify-content: space-between;
@@ -89,7 +91,9 @@ export const Button = styled.div<StyleProps>`
 
 export const ButtonDesc = styled.span<StyleProps>`
     color: ${(props) => `${props.textColor}`};
-    font-size: 22px;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bold;
     line-height: 35px;
     text-decoration: none;
