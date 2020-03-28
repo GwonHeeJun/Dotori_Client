@@ -63,6 +63,7 @@ const AuthLoginArea: React.FC = () => {
             {' '}
             로그인
           </S.Title>
+          <S.ErrMsg>{errMsg}</S.ErrMsg>
           <S.InputForm onSubmit={LoginSubmit}>
             <S.Input
               type="email"
@@ -87,7 +88,6 @@ const AuthLoginArea: React.FC = () => {
                 <S.LoginText>로그인</S.LoginText>
               </S.LoginButton>
             </S.InputRow>
-            <S.ErrMsg>{errMsg}</S.ErrMsg>
           </S.InputForm>
           <S.Desc>
             이메일 혹은 비밀번호를 잊으셨나요?
