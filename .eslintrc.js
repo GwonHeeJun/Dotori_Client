@@ -20,6 +20,7 @@ module.exports = {
       'jsx-a11y/anchor-is-valid': 0,
       'import/no-extraneous-dependencies': 0,
       'no-alert': 0,
-      'no-console': 0 // master 브랜치에서는 1로 바꾸고 실행해주세요.
+      'no-console': 0, // master 브랜치에서는 1로 바꾸고 실행해주세요.
+      'react/jsx-one-expression-per-line': 0
     },
   };

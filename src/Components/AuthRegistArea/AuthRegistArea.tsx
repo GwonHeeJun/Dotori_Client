@@ -65,7 +65,9 @@ const AuthRegistArea: React.FC<RegistProps> = ({ history }) => {
     <S.Postioner>
       <S.InputArea>
         <S.InputWrapper>
-          <S.Title>{userType} 계정 생성</S.Title>
+          <S.Title>
+            {userType} 계정 생성
+          </S.Title>
           <S.ErrMsg>{ErrMsg}</S.ErrMsg>
           <S.InputForm onSubmit={RegistSubmit}>
             <S.Input

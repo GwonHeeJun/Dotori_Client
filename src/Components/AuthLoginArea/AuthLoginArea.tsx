@@ -59,9 +59,7 @@ const AuthLoginArea: React.FC = () => {
       <S.InputArea>
         <S.InputWrapper>
           <S.Title>
-            {userType}
-            {' '}
-            로그인
+            {userType} 로그인
           </S.Title>
           <S.ErrMsg>{errMsg}</S.ErrMsg>
           <S.InputForm onSubmit={LoginSubmit}>
