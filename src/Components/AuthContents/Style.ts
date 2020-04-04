@@ -91,7 +91,7 @@ export const Button = styled.div<StyleProps>`
 
 export const ButtonDesc = styled.span<StyleProps>`
     color: ${(props) => `${props.textColor}`};
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
