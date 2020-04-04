@@ -16,7 +16,7 @@ import Router from './Router/Router';
 const history = createBrowserHistory()
 
 const App: React.FC = () => {
-  const [isReactive, setIsReactive] = useState(Boolean)
+  const [isReactive, setIsReactive] = useState(true)
 
   setInterval(() => window.screen.width >= 1550 ? setIsReactive(true) : setIsReactive(false), 500);
 
