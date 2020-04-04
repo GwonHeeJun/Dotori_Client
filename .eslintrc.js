@@ -21,6 +21,10 @@ module.exports = {
       'import/no-extraneous-dependencies': 0,
       'no-alert': 0,
       'no-console': 0, // master 브랜치에서는 1로 바꾸고 실행해주세요.
-      'react/jsx-one-expression-per-line': 0
+      'react/jsx-one-expression-per-line': 0,
+      'max-len': 0,
+      'react/jsx-wrap-multilines' : 0,
+      'no-confusing-arrow' : 0,
+      'operator-linebreak' : 0
     },
   };
