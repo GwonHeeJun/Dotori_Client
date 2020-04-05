@@ -42,7 +42,7 @@ const returnSvgIcons = (router: String) => {
     }
 }
 
-const onChangeMenuActiveType = (index: Number) => menuList.map((item, ix) => ix === index ? menuList[ix].active = !menuList[ix].active : menuList[ix].active = false)
+const onChangeMenuActiveType = (index: Number) => menuList.map((item, ix) => ix === index ? menuList[ix].active = true : menuList[ix].active = false)
 
 const LeftNavigator: React.FC = () => {
     return (
