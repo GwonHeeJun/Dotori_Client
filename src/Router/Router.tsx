@@ -12,8 +12,8 @@ const Router: React.FC = () => {
       <Route exact path="/login" component={LoginContainer} />
       <Route exact path="/regist" component={RegistContainer} />
       <Route exact path="/home" component={MainTemplate} />
-      <Route exact path="/laptop" component={() => <div>노트북 대여 페이지</div>} />
-      <Route exact path="/notice" component={() => <div>공지사항 페이지</div>} />
+      <Route exact path="/laptop" component={MainTemplate} />
+      <Route exact path="/notice" component={MainTemplate} />
       <Route exact path="/notice/write" component={() => <div>공지사항 작성 페이지</div>} />
     </Switch>
   );

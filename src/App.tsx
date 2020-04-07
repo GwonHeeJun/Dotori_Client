@@ -18,7 +18,7 @@ const history = createBrowserHistory()
 const App: React.FC = () => {
   const [isReactive, setIsReactive] = useState(true)
 
-  setInterval(() => window.screen.width >= 1550 ? setIsReactive(true) : setIsReactive(false), 500);
+  setInterval(() => document.body.clientWidth >= 1550 ? setIsReactive(true) : setIsReactive(false), 500);
 
   return (
     isReactive ?
