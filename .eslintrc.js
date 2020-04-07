@@ -25,6 +25,10 @@ module.exports = {
       'max-len': 0,
       'react/jsx-wrap-multilines' : 0,
       'no-confusing-arrow' : 0,
-      'operator-linebreak' : 0
+      'operator-linebreak' : 0,
+      'consistent-return' : 0,
+      'no-return-assign' : 0,
+      'react/jsx-indent' : 0,
+      'implicit-arrow-linebreak' : 0
     },
   };

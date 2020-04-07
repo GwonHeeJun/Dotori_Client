@@ -8,7 +8,7 @@ export const Postioner = styled.div`
 `
 
 export const LogoTitle = styled.h2`
-    font-size: 24px;
+    font-size: 1.5rem;
     cursor: ${(props) => (props.onClick ? 'pointer' : null)};
     font-weight: bold;
     font-family: 'Spoqa Han Sans';

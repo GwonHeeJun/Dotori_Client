@@ -59,7 +59,7 @@ export const Checkbox = styled.div`
 export const BoxText = styled.span`
     text-align: center;
     color: #444444;
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: lighter;
     margin-left: 11px;
 
@@ -90,7 +90,7 @@ export const LoginButton = styled.button`
 `
 
 export const LoginText = styled.span`
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     color: #fff;
 `
@@ -104,25 +104,25 @@ export const Input = styled.input`
     width: 90%;
     font-weight: normal;
     outline: none;
-    font-size: 18px;
+    font-size: 1.1rem;
     color: #444444;
 
     &::placeholder {
         color: #444444;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: bold;
     }
 `
 
 export const Title = styled.h2`
-    font-size: 44px;
+    font-size: 2.75rem;
     font-weight: bold;
     color: #222222;
     line-height: 60px;
 `
 
 export const Desc = styled.span`
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: lighter;
     margin-bottom: 8px;
 

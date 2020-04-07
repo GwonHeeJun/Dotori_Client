@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import MainContainer from 'Containers/Auth/MainContainer/MainContainer';
 import LoginContainer from 'Containers/Auth/LoginContainer/LoginContainer';
 import RegistContainer from 'Containers/Auth/RegistContainer/RegistContainer';
+import MainTemplate from 'Containers/Template/MainTemplate/MainTemplate';
 
 const Router: React.FC = () => {
   return (
@@ -10,9 +11,9 @@ const Router: React.FC = () => {
       <Route exact path="/" component={MainContainer} />
       <Route exact path="/login" component={LoginContainer} />
       <Route exact path="/regist" component={RegistContainer} />
-      <Route exact path="/home" component={() => <div>메인 페이지</div>} />
-      <Route exact path="/laptop" component={() => <div>노트북 대여 페이지</div>} />
-      <Route exact path="/notice" component={() => <div>공지사항 페이지</div>} />
+      <Route exact path="/home" component={MainTemplate} />
+      <Route exact path="/laptop" component={MainTemplate} />
+      <Route exact path="/notice" component={MainTemplate} />
       <Route exact path="/notice/write" component={() => <div>공지사항 작성 페이지</div>} />
     </Switch>
   );
