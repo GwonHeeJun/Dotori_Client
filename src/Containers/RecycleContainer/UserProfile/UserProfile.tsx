@@ -1,8 +1,8 @@
 import React from 'react';
-import * as S from './Style';
 
 import { ReactComponent as Out } from 'Assets/Svg/out.svg';
 import { ReactComponent as Limit } from 'Assets/Svg/limit.svg';
+import * as S from './Style';
 
 const UserProfile: React.FC = () => {
   return (
