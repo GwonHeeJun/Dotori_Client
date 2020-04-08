@@ -33,11 +33,11 @@ export const Title = styled.h2`
     font-size: 3rem;
     font-weight: bold;
     color: #222222;
-    line-height: 60px;
+    line-height: 3.75rem;
 `
 
 export const SubTitle = styled.span`
-    margin-top: 10px;
+    margin-top: 2.3%;
     font-size: 1.125rem;
     font-weight: lighter;
     color: #222222;
@@ -62,7 +62,7 @@ export const ButtonWrapper = styled.div`
 `
 
 export const Lable = styled.h2`
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
 `
 
@@ -78,8 +78,8 @@ export const Buttons = styled.div`
 export const Button = styled.div<StyleProps>`
     background-color: ${(props) => `${props.backgrounColor}`};
     flex: 1;
-    margin: 16px 15px 16px 0px;
-    padding: 8px 16px;
+    margin: 7.3% 6.85% 7.3% 0px;
+    padding: 3.65% 7.3%;
     border-radius: 10px;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
     justify-content: space-between;
@@ -95,6 +95,6 @@ export const ButtonDesc = styled.span<StyleProps>`
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
-    line-height: 35px;
+    line-height: 2.2rem;
     text-decoration: none;
 `

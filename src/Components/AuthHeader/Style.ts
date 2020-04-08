@@ -12,6 +12,6 @@ export const LogoTitle = styled.h2`
     cursor: ${(props) => (props.onClick ? 'pointer' : null)};
     font-weight: bold;
     font-family: 'Spoqa Han Sans';
-    padding-left: 60px;
+    padding-left: 11.1%;
     color: #222222;
 `
