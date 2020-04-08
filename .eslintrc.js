@@ -29,6 +29,7 @@ module.exports = {
       'consistent-return' : 0,
       'no-return-assign' : 0,
       'react/jsx-indent' : 0,
-      'implicit-arrow-linebreak' : 0
+      'implicit-arrow-linebreak' : 0,
+      '@typescript-eslint/no-unused-expressions': 0
     },
   };
