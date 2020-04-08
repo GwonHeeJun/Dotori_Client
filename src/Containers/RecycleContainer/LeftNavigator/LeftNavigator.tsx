@@ -50,7 +50,7 @@ const LeftNavigator: React.FC = () => {
             <h2>로고</h2>
             <S.MenuDivision>
                 {menuList.map((item, ix) =>
-                    <Link to={`/${item.router}`} onClick={() => onChangeMenuActiveType(ix)}>
+                    <Link to={`/${item.router}`} onClick={() => onChangeMenuActiveType(ix)} key={item.router}>
                         <S.MenuLabel isActive={item.active}>
                             {returnSvgIcons(item.router)}
                             <S.MenuText>{item.title}</S.MenuText>
@@ -59,7 +59,7 @@ const LeftNavigator: React.FC = () => {
             </S.MenuDivision>
             <S.WrapDivision>
                 {subMenuList.map((item) =>
-                    <S.SubMenuLabel isActive={item.active}>
+                    <S.SubMenuLabel isActive={item.active} key={item.router}>
                         {returnSvgIcons(item.router)}
                         <S.SubMenuText>{item.title}</S.SubMenuText>
                     </S.SubMenuLabel>)}

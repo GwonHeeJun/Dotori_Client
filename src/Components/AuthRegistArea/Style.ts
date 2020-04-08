@@ -28,7 +28,7 @@ export const InputForm = styled.form`
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 7%;
     align-items: center;
 `
 
@@ -61,7 +61,7 @@ export const BoxText = styled.span`
     color: #444444;
     font-size: 1.1rem;
     font-weight: lighter;
-    margin-left: 11px;
+    margin-left: 2.6%;
 
     a {
         color: #217ECE;
@@ -71,14 +71,14 @@ export const BoxText = styled.span`
 `
 
 export const ErrMsg = styled.span`
-    margin-top: 10px;
+    margin-top: 2.5%;
     color: #fa5252;
 `
 
 
 export const LoginButton = styled.button`
     background-color: #0F4C81;
-    margin-top: 30px;
+    margin-top: 7%;
     width: 80%;
     height: 60px;
     border-radius: 20px;
@@ -87,6 +87,7 @@ export const LoginButton = styled.button`
     justify-content: center;
     cursor: pointer;
     outline: none;
+    border: none;
 `
 
 export const LoginText = styled.span`
@@ -99,8 +100,8 @@ export const Input = styled.input`
     background-color: #f4f4f4;
     border: 1px solid #F4F4F4;
     border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 22px 19px;
+    margin-bottom: 4.6%;
+    padding: 5.05% 4.4%;
     width: 90%;
     font-weight: normal;
     outline: none;
@@ -118,13 +119,5 @@ export const Title = styled.h2`
     font-size: 2.75rem;
     font-weight: bold;
     color: #222222;
-    line-height: 60px;
-`
-
-export const Desc = styled.span`
-    font-size: 1rem;
-    font-weight: lighter;
-    margin-bottom: 8px;
-
-    
+    line-height: 3.75rem;
 `
