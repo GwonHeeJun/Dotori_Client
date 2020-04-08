@@ -15,10 +15,19 @@ export const Icon = styled.img`
 `
 
 export const Desc = styled.h2`
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
+    word-break: keep-all;
+    text-align: center;
 `;
 
 export const Top = styled.span`
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    word-break: keep-all;
+    text-align: center;
+`
+
+export const SubTitle = styled.span`
+    margin-bottom: 25px;
+    word-break: keep-all;
+    text-align: center;
 `
