@@ -42,7 +42,6 @@ export const Contents = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 6.2%;
 `
 
 export const UserWrapper = styled.div`
@@ -86,12 +85,18 @@ export const ProfileGrade = styled.span`
 
 export const PointWrapper = styled.div`
     flex: 1;
-    padding: 0px 10.4%;
+    padding: 0px 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
     svg {
         fill: #444444;
+    }
+    @media all and (max-width:1805px) {
+        svg {
+            display: none;
+        }
     }
 `
 
@@ -125,9 +130,9 @@ export const PointValue = styled.span`
 `
 
 export const EventWrapper = styled.div`
-    width: calc(100% - 20.8%);
+    width: 80%;
     flex: 0.8;
-    padding: 0px 10.4%;
+    padding: 0px 10%;
 `
 
 export const EventLabel = styled.h2`

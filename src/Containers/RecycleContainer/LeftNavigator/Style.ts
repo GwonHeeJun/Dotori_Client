@@ -36,6 +36,17 @@ export const MenuLabel = styled.div<StyleProps>`
         height: 1.5rem;
         fill: ${(props) => props.isActive ? '#0f4c81' : '#bbbbbe'};
     }
+
+    &:hover {
+        color: #0f4c81;
+        cursor: pointer;
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: #0f4c81;
+        }
+    }
 `
 
 export const MenuText = styled.span`
@@ -63,6 +74,17 @@ export const SubMenuLabel = styled.div<StyleProps>`
         width: 1.5rem;
         height: 1.5rem;
         fill: #bbbbbe;
+    }
+
+    &:hover {
+        color: #0f4c81;
+        cursor: pointer;
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: #0f4c81;
+        }
     }
 `
 
