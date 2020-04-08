@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // 상태관리 모듈 및 파일
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
@@ -23,7 +23,6 @@ const App: React.FC = () => {
     document.body.clientWidth >= 1550 ? setIsReactiveWidth(true) : setIsReactiveWidth(false);
     document.body.clientHeight >= 950 ? setIsReactiveHeight(true) : setIsReactiveHeight(false);
   }, 500);
-
 
   return (
     isReactiveWidth && isReactiveHeight ?

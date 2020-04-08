@@ -3,8 +3,6 @@ import ICN_FULLSCREEN from 'Assets/full_screen.png';
 import * as S from './Style';
 
 const ReactiveContainer: React.FC = () => {
- 
-
   return (
     <S.Postioner>
       <S.Icon src={ICN_FULLSCREEN} />
