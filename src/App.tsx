@@ -21,7 +21,7 @@ const App: React.FC = () => {
 
   setInterval(() => {
     document.body.clientWidth >= 1550 ? setIsReactiveWidth(true) : setIsReactiveWidth(false);
-    document.body.clientHeight >= 950 ? setIsReactiveHeight(true) : setIsReactiveHeight(false);
+    document.body.clientHeight >= 800 ? setIsReactiveHeight(true) : setIsReactiveHeight(false);
   }, 500);
 
   return (
